@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+  <div class="row">
+    <img [src]="country.flag">
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+    <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+      <div class="row">
+        <label><strong>Name: </strong></label>
+        <span>{{country.name}}</span>
+      </div>
+      <div class="row">
+        <label><strong>Capital: </strong></label>
+        <span>{{country.capital}}</span>
+      </div>
+      <div class="row">
+        <label><strong>Region: </strong></label>
+        <span>{{country.region}} ({{country.subregion}})</span>
+      </div>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+      <div class="row">
+        <label><strong>Currencies: </strong></label>
+        <span>Euro</span>
+      </div>
+
+      <div class="row">
+        <label><strong>Regional Blocs: </strong></label>
+        <span>EU</span>
+      </div>
+
+      <div class="row">
+        <label><strong>See in map: </strong></label>
+        <a href="https://maps.google.com/maps?ll={{country.latlng}}&z=3" target="_blank"><mat-icon>place</mat-icon></a>
+      </div>
+    </div>
+  </div>
+</div>
